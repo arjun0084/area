@@ -1,0 +1,11 @@
+create procedure area(in radius int)
+begin
+declare error char(50);
+set error = 'invalid';
+if(radius<5||radius>9)
+then
+select(error);
+else
+select(3.14*radius*radius);
+end if;
+end //
